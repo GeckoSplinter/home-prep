@@ -8,7 +8,7 @@ spec:
   interval: 30m
   ref:
     branch: main
-  url: ssh://github.com/GeckoSplinter/home-prep
+  url: ssh://git@github.com/GeckoSplinter/home-prep
   secretRef:
     name: flux-system
   ignore: |
