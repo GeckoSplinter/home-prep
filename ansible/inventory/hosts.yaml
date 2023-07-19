@@ -1,0 +1,14 @@
+---
+kubernetes:
+  children:
+    master:
+      hosts:
+        k8s-temp-0:
+          ansible_user: gecko
+          ansible_host: 192.168.42.129
+        k8s-temp-1:
+          ansible_user: gecko
+          ansible_host: 192.168.42.130
+        k8s-temp-2:
+          ansible_user: gecko
+          ansible_host: 192.168.42.131
