@@ -1,0 +1,46 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: ServersTransport
+metadata:
+  name: nas
+  namespace: infra
+spec:
+  insecureSkipVerify: true
+  disableHTTP2: true
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: other
+  namespace: networking
+spec:
+  entryPoints:
+    - web
+    - websecure
+  tls:
+    secretName: wildcard-home
+  routes:
+    - match: "Host(`longhorn.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: longhorn-frontend
+          namespace: longhorn-system
+          port: 80
+      middlewares:
+        - name: headers-https
+    - match: "Host(`nas.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: nas
+          namespace: infra
+          port: 443
+          serversTransport: nas
+    - match: "Host(`octopi.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: octopi
+          namespace: infra
+          port: 80

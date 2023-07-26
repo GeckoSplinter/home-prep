@@ -1,0 +1,27 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: media
+  namespace: networking
+spec:
+  entryPoints:
+    - web
+    - websecure
+  tls:
+    secretName: wildcard-home
+  routes:
+    - match: "Host(`plex.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: plex
+          namespace: infra
+          port: 32400
+    - match: "Host(`tautulli.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: tautulli
+          namespace: media
+          port: 8181
