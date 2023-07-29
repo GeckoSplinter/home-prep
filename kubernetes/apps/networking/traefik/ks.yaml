@@ -10,6 +10,8 @@ spec:
   sourceRef:
     kind: GitRepository
     name: home-kubernetes
+  dependsOn:
+    - name: cluster-apps-cert-manager-issuers
   wait: true
   interval: 30m
   retryInterval: 1m
@@ -57,7 +59,7 @@ metadata:
 spec:
   dependsOn:
     - name: cluster-apps-traefik
-    - name: cluster-apps-middlewares
+    - name: cluster-apps-traefik-middlewares
   path: ./kubernetes/apps/networking/traefik/ingressroutes
   prune: true
   sourceRef:
