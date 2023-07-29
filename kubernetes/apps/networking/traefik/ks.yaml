@@ -34,7 +34,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: cluster-apps-middlewares
+  name: cluster-apps-traefik-middlewares
   namespace: flux-system
 spec:
   dependsOn:
@@ -52,7 +52,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: cluster-apps-ingress-routes
+  name: cluster-apps-traefik-ingress-routes
   namespace: flux-system
 spec:
   dependsOn:
