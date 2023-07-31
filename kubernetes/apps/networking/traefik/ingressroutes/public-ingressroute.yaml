@@ -25,4 +25,12 @@ spec:
           name: webhook-receiver
           namespace: flux-system
           port: 80
+    - match: "Host(`echo.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: echo-server
+          namespace: networking
+          port: 80
+
 
