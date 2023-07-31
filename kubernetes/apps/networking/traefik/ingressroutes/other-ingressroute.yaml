@@ -36,6 +36,13 @@ spec:
           name: weave-gitops
           namespace: flux-system
           port: 9001
+    - match: "Host(`hijimari.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: hijimari
+          namespace: default
+          port: 3000
     - match: "Host(`nas.${SECRET_DOMAIN}`)"
       kind: Rule
       services:
