@@ -29,6 +29,13 @@ spec:
           port: 80
       middlewares:
         - name: headers-https
+    - match: "Host(`flux.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: weave-gitops
+          namespace: flux-system
+          port: 9001
     - match: "Host(`nas.${SECRET_DOMAIN}`)"
       kind: Rule
       services:
