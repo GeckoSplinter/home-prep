@@ -18,11 +18,11 @@ spec:
           name: home-assistant
           namespace: home
           port: 8123
-    - match: "Host(`flux-webhook.${SECRET_DOMAIN}`)"
+    - match: "Host(`flux-webhook.${SECRET_DOMAIN}`) && PathPrefix(`/hook`)"
       kind: Rule
       services:
         - kind: Service
-          name: flux-webhook
+          name: webhook-receiver
           namespace: flux-system
-          port: 8080
+          port: 80
 
