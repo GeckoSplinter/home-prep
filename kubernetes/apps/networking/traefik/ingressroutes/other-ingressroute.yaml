@@ -18,7 +18,7 @@ spec:
     - web
     - websecure
   tls:
-    secretName: wildcard-home
+    secretName: "${SECRET_DOMAIN/./-}-production-tls"
   routes:
     - match: "Host(`longhorn.${SECRET_DOMAIN}`)"
       kind: Rule

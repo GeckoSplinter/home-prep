@@ -9,7 +9,7 @@ spec:
     - web
     - web-secure
   tls:
-    secretName: wildcard-home
+    secretName: "${SECRET_DOMAIN/./-}-production-tls"
   routes:
     - match: "Host(`home-code.${SECRET_DOMAIN}`)"
       kind: Rule
