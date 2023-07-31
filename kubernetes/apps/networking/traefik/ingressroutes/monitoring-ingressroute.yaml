@@ -16,21 +16,21 @@ spec:
       services:
         - kind: Service
           name: prometheus-stack-kube-prom-prometheus
-          namespace: infra
+          namespace: monitoring
           port: 9090
     - match: "Host(`grafana.${SECRET_DOMAIN}`)"
       kind: Rule
       services:
         - kind: Service
           name: grafana
-          namespace: infra
+          namespace: monitoring
           port: 80
     - match: "Host(`loki.${SECRET_DOMAIN}`)"
       kind: Rule
       services:
         - kind: Service
           name: loki
-          namespace: infra
+          namespace: monitoring
           port: 3100
     - match: "Host(`hubble.${SECRET_DOMAIN}`)"
       kind: Rule
