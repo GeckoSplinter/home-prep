@@ -9,7 +9,7 @@ spec:
     - http-pub
     - https-pub
   tls:
-    secretName: wildcard-home
+    secretName: "${SECRET_DOMAIN/./-}-production-tls"
   routes:
     - match: "Host(`${SECRET_DOMAIN}`)"
       kind: Rule
