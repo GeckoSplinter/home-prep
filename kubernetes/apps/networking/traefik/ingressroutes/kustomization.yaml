@@ -8,3 +8,4 @@ resources:
   - ./monitoring-ingressroute.yaml
   - ./networking-ingressroute.yaml
   - ./other-ingressroute.yaml
+  - ./public-ingressroute.yaml

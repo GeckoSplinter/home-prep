@@ -1,0 +1,28 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: public
+  namespace: networking
+spec:
+  entryPoints:
+    - http-pub
+    - https-pub
+  tls:
+    secretName: wildcard-home
+  routes:
+    - match: "Host(`${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: home-assistant
+          namespace: home
+          port: 8123
+    - match: "Host(`flux-webhook.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: flux-webhook
+          namespace: flux-system
+          port: 8080
+

@@ -6,18 +6,11 @@ metadata:
   namespace: networking
 spec:
   entryPoints:
-    - http-pub
-    - https-pub
+    - web
+    - web-secure
   tls:
     secretName: wildcard-home
   routes:
-    - match: "Host(`${SECRET_DOMAIN}`)"
-      kind: Rule
-      services:
-        - kind: Service
-          name: home-assistant
-          namespace: home
-          port: 8123
     - match: "Host(`home-code.${SECRET_DOMAIN}`)"
       kind: Rule
       services:
