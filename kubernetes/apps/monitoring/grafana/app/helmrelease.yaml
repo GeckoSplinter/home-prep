@@ -28,8 +28,6 @@ spec:
   dependsOn:
     - name: local-path-provisioner
       namespace: kube-system
-    - name: ingress-nginx
-      namespace: networking
   values:
     deploymentStrategy:
       type: Recreate
@@ -160,16 +158,6 @@ spec:
         labelValue: ""
     serviceMonitor:
       enabled: true
-    ingress:
-      enabled: true
-      ingressClassName: nginx
-      annotations:
-        hajimari.io/icon: simple-icons:grafana
-      hosts:
-        - &host "grafana.${SECRET_DOMAIN}"
-      tls:
-        - hosts:
-            - *host
     persistence:
       enabled: true
       storageClassName: local-path
