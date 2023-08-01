@@ -19,13 +19,18 @@ spec:
     createNamespace: true
     remediation:
       retries: 3
+    crds: CreateReplace
   upgrade:
+    crds: CreateReplace
     cleanupOnFail: true
     remediation:
       retries: 3
   uninstall:
     keepHistory: false
   values:
+    image:
+      repository: ghcr.io/toboshii/hajimari
+      tag: main-f77fe68
     hajimari:
       title: Apps
       darkTheme: espresso
