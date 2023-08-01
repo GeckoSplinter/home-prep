@@ -45,6 +45,29 @@ spec:
           - default
           - monitoring
           - networking
+      customApps:
+        - group: Infra
+          apps:
+            - name: Grafana
+              url: https://grafana.${SECRET_DOMAIN}
+              icon: simple-icons:grafana
+              targetBlank: true
+            - name: Prometheus
+              url: https://prometheus.${SECRET_DOMAIN}
+              icon: simple-icons:prometheus
+              targetBlank: true
+            - name: Flux
+              url: https://flux.${SECRET_DOMAIN}
+              icon: simple-icons:sawtooth-wave
+              targetBlank: true
+            - name: Echo
+              url: https://echo.${SECRET_DOMAIN}
+              icon: video-input-antenna
+              targetBlank: true
+            - name: Longhorn
+              url: https://longhorn.${SECRET_DOMAIN}
+              icon: simple-icons:rancher
+              targetBlank: true
     podAnnotations:
       configmap.reloader.stakater.com/reload: hajimari-settings
     persistence:
