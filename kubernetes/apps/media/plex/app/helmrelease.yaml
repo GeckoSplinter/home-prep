@@ -52,8 +52,8 @@ spec:
       - name: config
         mountPath: /config
         accessMode: ReadWriteOnce
-        size: 100Gi
-        storageClass: ceph-block
+        size: 20Gi
+        storageClass: longhorn
     persistence:
       media:
         enabled: true
