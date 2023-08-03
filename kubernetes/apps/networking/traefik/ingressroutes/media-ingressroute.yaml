@@ -16,7 +16,7 @@ spec:
       services:
         - kind: Service
           name: plex
-          namespace: infra
+          namespace: media
           port: 32400
     - match: "Host(`tautulli.${SECRET_DOMAIN}`)"
       kind: Rule
