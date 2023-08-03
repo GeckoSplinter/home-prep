@@ -33,7 +33,7 @@ spec:
       annotations:
         reloader.stakater.com/auto: "true"
     image:
-      repository: ghcr.io/onedr0p/plex
+      repository: plexinc/pms-docker
       tag: 1.32.5.7349-8f4248874
     env:
       TZ: Europe/Paris 
