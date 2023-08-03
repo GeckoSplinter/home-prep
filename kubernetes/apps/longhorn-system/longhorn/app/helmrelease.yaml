@@ -21,3 +21,5 @@ spec:
     cleanupOnFail: true
   values:
     enablePSP: false
+    defaultSettings:
+      backupTarget: "${SECRET_LONGHORN_BACKUP_TARGET}"
