@@ -37,6 +37,7 @@ spec:
       tag: 1.32.5.7349-8f4248874
     env:
       TZ: Europe/Paris 
+      PLEX_CLAIM: "claim-QayJ1vvWk96dY9LspX2m"
     service:
       main:
         ports:
