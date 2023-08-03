@@ -34,7 +34,7 @@ spec:
         reloader.stakater.com/auto: "true"
     image:
       repository: ghcr.io/onedr0p/plex
-      tag: 1.31.0.6654-02189b09f
+      tag: 1.32.5.7349-8f4248874
     env:
       TZ: Europe/Paris 
     service:
