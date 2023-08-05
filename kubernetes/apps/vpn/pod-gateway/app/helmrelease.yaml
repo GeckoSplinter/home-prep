@@ -40,7 +40,7 @@ spec:
           - name: VPN_TYPE
             value: wireguard
           - name: VPN_SERVICE_PROVIDER
-            value: protonvpn
+            value: custom
           - name: VPN_INTERFACE
             value: wg0
           - name: SERVER_COUNTRIES
