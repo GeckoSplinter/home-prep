@@ -43,8 +43,8 @@ spec:
             value: custom
           - name: VPN_INTERFACE
             value: wg0
-          - name: SERVER_COUNTRIES
-            value: "Netherlands"
+          # - name: SERVER_COUNTRIES
+          #   value: "Netherlands"
           - name: FIREWALL
             value: "off"
           - name: DOT
