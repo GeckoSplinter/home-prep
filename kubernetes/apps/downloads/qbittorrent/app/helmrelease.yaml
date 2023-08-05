@@ -35,6 +35,9 @@ spec:
     hostname: qbittorrent
     podAnnotations:
        setGateway: "true"
+    addons:
+      netshoot:
+        enabled: true
     env:
       TZ: Europe/Paris
       QBITTORRENT__PORT: &port 80
