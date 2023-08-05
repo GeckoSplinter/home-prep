@@ -73,6 +73,11 @@ spec:
               secretKeyRef:
                 name: pod-gateway-vpnconfig
                 key: VPN_ENDPOINT_IP
+          - name: WIREGUARD_DNS
+            valueFrom:
+              secretKeyRef:
+                name: pod-gateway-vpnconfig
+                key: WIREGUARD_DNS
 
         # envFrom:
         #   - secretRef:
