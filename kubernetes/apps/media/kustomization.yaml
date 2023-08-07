@@ -4,4 +4,5 @@ kind: Kustomization
 resources:
   - ./namespace.yaml
   - ./flaresolverr/ks.yaml
+  - ./jackett/ks.yaml
   - ./plex/ks.yaml
