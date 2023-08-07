@@ -35,6 +35,10 @@ spec:
     hostname: qbittorrent
     podAnnotations:
        setGateway: "true"
+    dnsConfig:
+      options:
+        - name: ndots
+          value: "1"
     addons:
       netshoot:
         enabled: true
