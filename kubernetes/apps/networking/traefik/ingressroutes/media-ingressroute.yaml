@@ -25,3 +25,10 @@ spec:
           name: tautulli
           namespace: media
           port: 8181
+    - match: "Host(`flaresolverr.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: flaresolverr
+          namespace: media
+          port: 8191
