@@ -26,8 +26,8 @@ spec:
     keepHistory: false
   values:
     image:
-      repository: lscr.io/linuxserver/jackett
-      tag: v0.21.589
+      repository: linuxserver/jackett
+      tag: 0.21.589
     env:
       TZ: Europe/Paris 
     service:
