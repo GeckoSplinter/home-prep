@@ -29,13 +29,13 @@ spec:
       kind: Rule
       services:
         - kind: Service
-          name: jackett
+          name: flaresolverr
           namespace: media
-          port: 9117
+          port: 8191
     - match: "Host(`jackett.${SECRET_DOMAIN}`)"
       kind: Rule
       services:
         - kind: Service
-          name: flaresolverr
+          name: jackett
           namespace: media
-          port: 8191
+          port: 9117
