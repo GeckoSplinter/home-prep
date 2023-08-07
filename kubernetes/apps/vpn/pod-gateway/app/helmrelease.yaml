@@ -50,7 +50,7 @@ spec:
           - name: DOT
             value: "off"
           - name: DOT_VERBOSITY
-            value: "0"
+            value: "1"
           - name: VPN_ENDPOINT_PORT
             value: 51820
           - name: LOG_LEVEL
