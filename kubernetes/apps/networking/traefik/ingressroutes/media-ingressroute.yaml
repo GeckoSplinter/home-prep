@@ -25,13 +25,6 @@ spec:
           name: tautulli
           namespace: media
           port: 8181
-    - match: "Host(`flaresolverr.${SECRET_DOMAIN}`)"
-      kind: Rule
-      services:
-        - kind: Service
-          name: flaresolverr
-          namespace: media
-          port: 8191
     - match: "Host(`jackett.${SECRET_DOMAIN}`)"
       kind: Rule
       services:
@@ -39,3 +32,17 @@ spec:
           name: jackett
           namespace: media
           port: 9117
+    - match: "Host(`sonarr.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: sonarr
+          namespace: media
+          port: 8989
+    - match: "Host(`radarr.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: radarr
+          namespace: media
+          port: 7878
