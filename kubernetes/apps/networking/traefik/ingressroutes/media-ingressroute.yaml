@@ -46,3 +46,10 @@ spec:
           name: radarr
           namespace: media
           port: 7878
+    - match: "Host(`overseerr.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: overseerr
+          namespace: media
+          port: 80
