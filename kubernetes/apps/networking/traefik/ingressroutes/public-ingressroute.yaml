@@ -32,5 +32,13 @@ spec:
           name: echo-server
           namespace: networking
           port: 8080
+    - match: "Host(`plex.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: plex
+          namespace: media
+          port: 32400
+
 
 

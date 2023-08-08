@@ -39,9 +39,11 @@ spec:
       TZ: Europe/Paris 
     service:
       main:
+        type: LoadBalancer
+        externalTrafficPolicy: Local
         ports:
           http:
-            port: 32400
+            port: &port 32400
     podSecurityContext:
       runAsUser: 568
       runAsGroup: 568
