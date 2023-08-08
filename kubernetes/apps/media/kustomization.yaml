@@ -5,6 +5,7 @@ resources:
   - ./namespace.yaml
   - ./flaresolverr/ks.yaml
   - ./jackett/ks.yaml
+  - ./overseerr/ks.yaml
   - ./plex/ks.yaml
   - ./radarr/ks.yaml
   - ./sonarr/ks.yaml
