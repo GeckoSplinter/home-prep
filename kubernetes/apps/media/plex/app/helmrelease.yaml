@@ -40,7 +40,6 @@ spec:
     service:
       main:
         type: LoadBalancer
-        externalTrafficPolicy: Local
         ports:
           http:
             port: &port 32400
