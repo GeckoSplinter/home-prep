@@ -38,14 +38,14 @@ spec:
         - kind: Service
           name: sonarr
           namespace: media
-          port: 8989
+          port: 80
     - match: "Host(`radarr.${SECRET_DOMAIN}`)"
       kind: Rule
       services:
         - kind: Service
           name: radarr
           namespace: media
-          port: 7878
+          port: 80
     - match: "Host(`prowlarr.${SECRET_DOMAIN}`)"
       kind: Rule
       services:

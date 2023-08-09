@@ -37,6 +37,7 @@ spec:
       PROWLARR__LOG_LEVEL: info
       PROWLARR__AUTHENTICATION_METHOD: External
       PROWLARR__THEME: dark
+
     service:
       main:
         ports:
