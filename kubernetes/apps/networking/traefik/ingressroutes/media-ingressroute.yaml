@@ -25,13 +25,6 @@ spec:
           name: tautulli
           namespace: media
           port: 8181
-    - match: "Host(`jackett.${SECRET_DOMAIN}`)"
-      kind: Rule
-      services:
-        - kind: Service
-          name: jackett
-          namespace: media
-          port: 9117
     - match: "Host(`sonarr.${SECRET_DOMAIN}`)"
       kind: Rule
       services:
