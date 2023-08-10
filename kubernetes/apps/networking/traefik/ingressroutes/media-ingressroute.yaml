@@ -46,10 +46,3 @@ spec:
           name: prowlarr
           namespace: media
           port: 80
-    - match: "Host(`overseerr.${SECRET_DOMAIN}`)"
-      kind: Rule
-      services:
-        - kind: Service
-          name: overseerr
-          namespace: media
-          port: 80

@@ -39,6 +39,10 @@ spec:
           name: plex
           namespace: media
           port: 32400
-
-
-
+    - match: "Host(`overseerr.${SECRET_DOMAIN}`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: overseerr
+          namespace: media
+          port: 80
