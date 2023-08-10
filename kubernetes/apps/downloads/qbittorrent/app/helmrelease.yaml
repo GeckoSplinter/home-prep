@@ -79,7 +79,7 @@ spec:
         enabled: true
         type: nfs
         server: 192.168.10.12
-        path: /volume1/test-k8s
+        path: /volume1/media
         mountPath: /media
       incomplete:
         enabled: true
