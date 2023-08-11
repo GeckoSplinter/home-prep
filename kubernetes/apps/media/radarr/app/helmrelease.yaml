@@ -37,6 +37,11 @@ spec:
       RADARR__APPLICATION_URL: "https://radarr.${SECRET_DOMAIN}"
       RADARR__LOG_LEVEL: info
       RADARR__THEME: dark
+      RADARR__API_KEY:
+        valueFrom:
+          secretKeyRef:
+            name: app-arr-secret
+            key: RADARR__API_KEY
 
     service:
       main:

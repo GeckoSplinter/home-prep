@@ -37,6 +37,11 @@ spec:
       PROWLARR__LOG_LEVEL: info
       PROWLARR__AUTHENTICATION_METHOD: External
       PROWLARR__THEME: dark
+      PROWLARR__API_KEY:
+        valueFrom:
+          secretKeyRef:
+            name: app-arr-secret
+            key: PROWLARR__API_KEY
 
     service:
       main:

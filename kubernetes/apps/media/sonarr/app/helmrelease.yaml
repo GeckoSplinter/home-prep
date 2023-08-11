@@ -39,6 +39,11 @@ spec:
       SONARR__APPLICATION_URL: "https://sonarr.bjw-s.dev"
       SONARR__LOG_LEVEL: info
       SONARR__THEME: dark
+      SONARR__API_KEY:
+        valueFrom:
+          secretKeyRef:
+            name: app-arr-secret
+            key: SONARR__API_KEY
 
     service:
       main:
