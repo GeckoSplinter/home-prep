@@ -82,3 +82,9 @@ spec:
         server: 192.168.10.12
         path: /volume1/video
         mountPath: /media
+    resources:
+      requests:
+        cpu: 10m
+        memory: 250Mi
+      limits:
+        memory: 2000Mi

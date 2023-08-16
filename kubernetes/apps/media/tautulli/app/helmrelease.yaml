@@ -48,4 +48,9 @@ spec:
         accessMode: ReadWriteOnce
         size: 5Gi
         storageClass: longhorn
-
+    resources:
+      requests:
+        cpu: 10m
+        memory: 250Mi
+      limits:
+        memory: 500Mi

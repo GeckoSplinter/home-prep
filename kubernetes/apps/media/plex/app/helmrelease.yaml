@@ -72,3 +72,9 @@ spec:
         enabled: true
         type: emptyDir
         mountPath: /.local
+    resources:
+      requests:
+        cpu: 100m
+        memory: 2000Mi
+      limits:
+        memory: 8000Mi
